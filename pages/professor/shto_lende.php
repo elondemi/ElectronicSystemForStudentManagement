@@ -20,7 +20,7 @@
             </div>		
             <div class="right-box">
                 <span class="signinwith">Ketu mund te shtoni </br> lenden! </span>
-                <input type="submit" class="social facebook"  value="Shto lëndën"></input> 
+                <input type="submit" name="shto_lenden" class="social facebook"  value="Shto lëndën"></input> 
             </form>
             </div>
         </div>

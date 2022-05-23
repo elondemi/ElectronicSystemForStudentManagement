@@ -9,12 +9,11 @@ $html = '
 </head>
 <body>
 	<div id="login-box">
-		<div class="left-box">
-
 			<form action="login.php" >
-				<h1>Regjistrohu</h1>
-				<input type="text" name="Name" placeholder="Emri"/>
-				<input type="text" name="Surname" placeholder="Mbiemri"/>
+			<div class="left-box">	
+			<h1>Regjistrohu</h1>
+				<input type="text" name="username" placeholder="Emri"/>
+				<input type="text" name="username" placeholder="Mbiemri"/>
 				<label>Roli: </label> 
 				<label>Student</label>
 				<input type="radio" name="Role" />
