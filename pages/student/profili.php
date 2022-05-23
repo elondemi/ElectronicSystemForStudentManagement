@@ -47,9 +47,9 @@ $html1 = '<!DOCTYPE html>
         <input type="text" id="telefoni" name="telefoni"><br><br>
         <label for="adresa">Adresa :</label>
         <input type="text" id="adresa" name="adresa"><br><br>
-        <button id="show">Ndysho Fjalekalimin</button>
-        <input type="text" id="change_p" name="change_p"><br><br>
+      
         </form>
+        <button><a href="modifiko_profilin.php">Modifiko te dhenat</a></button>
         </div>
         </div>
         </div>
