@@ -16,9 +16,9 @@ $html1 = '<!DOCTYPE html>
 
     $html2 ='      
           <!-- Programimi në internet, DB, SO, Algoritmet. -->
-          <h1 style="text-align: center;">Lëndët e Studentit</h1>
+          <h1 style="text-align: center;margin-bottom:50px;">Lëndët e Studentit</h1>
           <hr>
-          <br><br><br>
+       
 
           <table id="customers">
             <tr>
@@ -29,23 +29,23 @@ $html1 = '<!DOCTYPE html>
             <tr>
               <td>Programimi në internet</td>
               <td>Dhurate Hyseni</td>
-              <th><a href="lista.html" style="color:white;">Detyrat </a></th>
+              <th><a href="lista.php" style="color:white;">Detyrat </a></th>
               
             </tr>
             <tr>
               <td>Baza e të Dhënave</td>
               <td>Dhurate Hyseni</td>
-              <th><a href="lista.html"style="color:white;">Detyrat </a></th>
+              <th><a href="lista.php"style="color:white;">Detyrat </a></th>
             </tr>
             <tr>
               <td>Programimi në Objekte</td>
               <td>Dhurate Hyseni</td>
-              <th><a href="lista.html"style="color:white;">Detyrat </a></th>
+              <th><a href="lista.php"style="color:white;">Detyrat </a></th>
             </tr>
             <tr>
               <td>Algoritmet dhe Struktura</td>
               <td>Dhurate Hyseni</td>
-              <th><a href="lista.html"style="color:white;">Detyrat </a></th>
+              <th><a href="lista.php"style="color:white;">Detyrat </a></th>
             </tr>
           
           </table>

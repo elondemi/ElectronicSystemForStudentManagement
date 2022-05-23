@@ -15,7 +15,7 @@ $html1 ='<!DOCTYPE html>
   <!-- Tek menyja “Vlerësimet” studenti do të ketë mundësi të shohë vlerësimin që i është bërë për
 secilën detyrë (edhe këtu të implementohen filterat sipas lëndës dhe semestrit). -->
           
-          <h1 style="margin-left:300px;">Vlerësimet</h1><hr><br>
+          <h1 style="margin-left:300px;margin: bottom 40px;">Vlerësimet</h1><hr>
           <table id="customers">
             <tr>
               <th>Detyra</th>

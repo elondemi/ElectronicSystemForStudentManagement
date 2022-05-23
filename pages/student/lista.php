@@ -12,11 +12,11 @@ $html1 = '<!DOCTYPE html>
     <body>';     
         
        $html2 = '
-          <button onclick="myFunction()">Kthehu mbrapa</button>
+          
              
-          <br><br><br>
+          
 
-          <form action="xxxxx.php" method="post" >
+          <form action="xxxxx.php" method="POST" >
             <h1>
             <label for="lista">Lista e Detyrave nga Lënda </label>
             <input type="text" id="lenda" name="lenda"></h1><br><br>
