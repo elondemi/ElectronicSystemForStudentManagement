@@ -5,96 +5,9 @@ $html = '
     <head>
         <title>Studentpage</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-        <style>
-            img {
-              border-radius: 50%;
-              margin-left: 80px;
-              
-            }
-            .sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgba(16, 52, 77, 0.644);
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 18px;
-  color: #f3f3f3;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-p{
-    color:white;
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-body{
-    background-color: rgb(168, 167, 167);
-}
-.top{
-     height:100px;
-     background-color:rgba(16, 52, 77, 0.644);
-     
-}
-.logo{
-    float:right;
-}
-#customers {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  color:white;
-  font-weight: bold;
-}
-
-#customers td, #customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#customers tr{background-color: rgba(16, 52, 77, 0.644);}
+        <link href="../../resources/assets/css/student.css" rel="stylesheet">
 
 
-
-#customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: rgba(16, 52, 77, 0.644);
-  color: white;
-}
-
-
-
-
-            </style>
     </head>  
     <body>     
         <div class="top">
