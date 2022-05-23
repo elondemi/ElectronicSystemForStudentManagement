@@ -9,8 +9,8 @@ $html = '
 </head>
 <body>
 	<div id="login-box">
-		<div class="left-box">
 			<form action="login.php" >
+			<div class="left-box">	
 			<h1>Regjistrohu</h1>
 				<input type="text" name="username" placeholder="Emri"/>
 				<input type="text" name="username" placeholder="Mbiemri"/>
