@@ -5,7 +5,7 @@
 
 function render_footer(){
  echo ' <!-- ======= Contact Section ======= -->
- <section id="contact" class="contact">
+ <section id="contact" class="contact" style="position:relative;top:100px;" >
    <div class="container">
 
      <div class="section-title">

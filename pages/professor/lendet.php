@@ -41,7 +41,7 @@
     $html2='   
     
     
-     <div style="position: absolute; width: 100%; top: 20%;">
+     <div style="position: relative; width: 100%; top: 120px;">
       <table  class="table">
         <thead>
           <tr>
@@ -83,28 +83,8 @@
         </tbody>
       </table>
         </div>
-      </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    
-     </br>
-    </br>
-    </br>
-    </br>
-     </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    
-    </br> 
-       
-       <a href="shto_lende.php"> <button type="button" style="position:relative;left:80%;" class="btn btn-success">Shto lëndë</button> </a>
+
+       <a href="shto_lende.php"> <button type="button" style="position:relative;left:80%;top:120px;" class="btn btn-success">Shto lëndë</button> </a>
     
         
     ';

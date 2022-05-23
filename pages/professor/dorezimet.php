@@ -42,37 +42,46 @@ $html1 ='<!DOCTYPE html>
 
 
 $html2 = ' 
-  <br>
-  <br>
-  <br>
-  <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>';
+<div style="position: relative; width: 100%; top: 120px;">
+      <table  class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Emri dhe mbiemri i studentit</th>
+            <th scope="col">Emri i lendes</th>
+            <th scope="col">Emri i detyres</th>
+            <th scope="col">Semestri</th>
+      
+    
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Engjell Bunjaku</td>
+            <td>Interneti </td>
+            <td>####</td>
+            <td>3</td>
+           
+          </tr>
+          <tr>
+              <th scope="row">2</th>
+              <td>Endrit Hoda</td>
+              <td>POO </td>
+              <td>####</td>
+              <td>3</td>
+          </tr>
+          <tr>
+              <th scope="row">2</th>
+              <td>Elon Demi </td>
+              <td>Arkitekture te kompjutereve</td>
+              <td>####</td>
+              <td>3</td>
+          </tr>
+        </tbody>
+      </table>
+        </div>
+  ';
     
 
    
