@@ -120,10 +120,7 @@ Odës Ekonomike Amerikane</pre></h2>
               <h3>Marrveshja mes Fiekut dhe Odes Amerikane</h3>
               <p>
                 Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike ka nënshkruar Memorandumin e Mirëkuptimit me “Odën Ekonomike Amerikane në Kosovë”, qëllimi i të cilit është të ofrojë këshilla profesionale për bizneset në fushën e inxhinierisë elektrike dhe kompjuterike dhe të mundëson kryerjen e praktikës profesionale për studentët, pranë bizneseve anëtare të Odës Ekonomike Amerikane në Kosovë.
-
-
               </p>
-             
               </div>
             </div><!-- End .content-->
           </div>
