@@ -1,7 +1,9 @@
+
+<!-- veq prov -->
 <?php 
 Class Database
 {
-    private $user ;
+    private $user;
     private $host;
     private $pass ;
     private $db;
