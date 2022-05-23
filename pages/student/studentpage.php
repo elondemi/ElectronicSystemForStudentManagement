@@ -14,8 +14,7 @@ $html1 = '<!DOCTYPE html>
     <body>'; 
       
           
-         $html2='
-         
+         $html2='         
 <div class="GrafikuN">
     <h1>...Grafika e Notav</h1>
     <hr>
