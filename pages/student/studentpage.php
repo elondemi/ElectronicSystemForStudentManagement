@@ -15,8 +15,6 @@ $html1 = '<!DOCTYPE html>
       
           
          $html2='
-          
-          
          
 <div class="GrafikuN">
     <h1>...Grafika e Notav</h1>

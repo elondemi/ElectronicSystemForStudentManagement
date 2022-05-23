@@ -1,5 +1,4 @@
 <?php
-
 require "../../resources/parts/header_student.php";
 $html1 = '
 <!DOCTYPE html>
@@ -9,17 +8,13 @@ $html1 = '
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
         <link href="../../resources/assets/css/student.css" rel="stylesheet">
         <script src="../../resources/assets/js/student.js"></script>
-
-
     </head>  
     <body>';     
-       
-          
           $html2 = '
-          <h1 style="margin-left:300px;">Dorëzo Detyrën</h1><hr>
- <br><br><br><br>
-          
-                  <form action="xxxx.php" method="post">
+          <h1 style="margin-left:300px;margin-bottom: 40px;">Dorëzo Detyrën</h1><hr>
+
+
+                  <form action="xxxx.php" method="POST">
                     <table id="customers">
                       <tr>
                         <th><label for="lenda">Zgjedh Lenda</label></th>
@@ -27,7 +22,6 @@ $html1 = '
                         <th><label for="detyra">Zgjedh  Detyren</label></th>
                         <th><label for="detyra">Ngarko Detyren</label></th>
                         <th><label for="dorezo">Dorezo</label></th>
-                        
                       </tr>  
                        <tr>
                          <td>
@@ -53,7 +47,6 @@ $html1 = '
                            <option value="detyra3"  name="detyra_3">Detyra 3</option>
                            <option value="detyra4"  name="detyra_4">Detyra 4</option>
                            </select>
-
                          </td>
                          <td>
                           <input type="file" id="myFile" name="filename">
@@ -62,12 +55,8 @@ $html1 = '
                             <input type="submit" id="dorezo" name="dorezo" value="Dorezo">
                          </td>
                        </tr>
-                
-                   
-                  </form>
-                
-  
 
+                  </form>
     </body>
 </html>
 ';

@@ -16,9 +16,9 @@ $html1 = '<!DOCTYPE html>
 
     $html2 ='      
           <!-- Programimi në internet, DB, SO, Algoritmet. -->
-          <h1 style="text-align: center;">Lëndët e Studentit</h1>
+          <h1 style="text-align: center;margin-bottom:50px;">Lëndët e Studentit</h1>
           <hr>
-          <br><br><br>
+       
 
           <table id="customers">
             <tr>
