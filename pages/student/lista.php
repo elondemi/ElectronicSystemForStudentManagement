@@ -1,5 +1,4 @@
 <?php
-
 require "../../resources/parts/header_student.php";
 $html1 = '<!DOCTYPE html>
 <html>
@@ -9,39 +8,25 @@ $html1 = '<!DOCTYPE html>
         <link href="../../resources/assets/css/student.css" rel="stylesheet">
         <script src="../../resources/assets/js/student.js"></script>
     </head>  
-    <body>';     
-        
+    <body>';        
        $html2 = '
-          
-             
-          
-
           <form action="xxxxx.php" method="POST" >
             <h1>
             <label for="lista">Lista e Detyrave nga Lënda </label>
             <input type="text" id="lenda" name="lenda"></h1><br><br>
           </form>
           <hr>
-          
           <table id="customers">
             <tr>
               <th>Titulli i Detyrës</th>
               <th>Përshkrimin</th>
               <th>Kohën e Dorëzimit</th>
               <th>Specifikat e Detyrës </th>
-            </tr>  
-
-      
+            </tr> 
           </table>
-
-
-
     </body>
 </html>';
-
 echo $html1;
 render_header();
 echo $html2;
-
-
 ?>

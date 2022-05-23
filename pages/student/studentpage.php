@@ -11,16 +11,13 @@ $html1 = '<!DOCTYPE html>
         <link href="../../resources/assets/css/student.css" rel="stylesheet">
         <script src="../../resources/assets/js/student.js"></script>
     </head>  
-    <body>'; 
-      
-          
+    <body>';    
          $html2='         
 <div class="GrafikuN">
     <h1>...Grafika e Notav</h1>
     <hr>
     <br><br>
 <canvas id="myChart" style="width:100%;max-width:800px"></canvas>
-
 <script>
     var xValues = ["10", "9", "8", "7", "6"];
     var yValues = [4, 2, 3, 1,0];
@@ -31,7 +28,6 @@ $html1 = '<!DOCTYPE html>
       "#e8c3b9",
       "#1e7145"
     ];
-    
     new Chart("myChart", {
       type: "pie",
       data: {
