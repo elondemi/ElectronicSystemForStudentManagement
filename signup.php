@@ -9,8 +9,9 @@ $html = '
 </head>
 <body>
 	<div id="login-box">
+		<div class="left-box">	
+
 			<form action="login.php" >
-			<div class="left-box">	
 			<h1>Regjistrohu</h1>
 				<input type="text" name="username" placeholder="Emri"/>
 				<input type="text" name="username" placeholder="Mbiemri"/>
@@ -25,8 +26,9 @@ $html = '
 				<input type="email" name="Conf_Email" placeholder="Confirm Email"/>				
 				<input type="submit" value="Sign Up" class="social facebook" >
 			</form>
-
+		
 		</div>
+		<div class="right-box"></div>
 	</div>	
 </body>
 </html>
