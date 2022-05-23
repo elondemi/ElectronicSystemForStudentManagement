@@ -7,6 +7,7 @@ $html1 ='<!DOCTYPE html>
         <title>Studentpage</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
         <link href="../../resources/assets/css/student.css" rel="stylesheet">
+        <script src="../../resources/assets/js/student.js"></script>
          
     </head>  
     <body>';     
@@ -21,22 +22,8 @@ secilën detyrë (edhe këtu të implementohen filterat sipas lëndës dhe semes
               <th>Lënda</th>
               <th>Semestri</th>
               <th>Vlerësimi</th>
-            </tr>
-           
-          
+            </tr>     
           </table>
-
-          
-          <script>
-          function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-          }
-          
-          function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-          }
-          </script>
-
     </body>
 </html>';
 

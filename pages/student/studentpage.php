@@ -3,28 +3,21 @@
 require "../../resources/parts/header_student.php";
 
 
-$html = '<!DOCTYPE html>
+$html1 = '<!DOCTYPE html>
 <html>
     <head>
         <title>Studentpage</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
         <link href="../../resources/assets/css/student.css" rel="stylesheet">
+        <script src="../../resources/assets/js/student.js"></script>
     </head>  
-    <body>'     
+    <body>'; 
       
           
          $html2='
-          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
           
-          <script>
-          function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-          }
           
-          function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-          }
-          </script>
+         
 <div class="GrafikuN">
     <h1>...Grafika e Notav</h1>
     <hr>

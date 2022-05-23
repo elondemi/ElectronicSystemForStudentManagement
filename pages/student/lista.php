@@ -7,6 +7,7 @@ $html1 = '<!DOCTYPE html>
         <title>Studentpage</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
         <link href="../../resources/assets/css/student.css" rel="stylesheet">
+        <script src="../../resources/assets/js/student.js"></script>
     </head>  
     <body>';     
         
@@ -33,22 +34,7 @@ $html1 = '<!DOCTYPE html>
       
           </table>
 
-          <script>
-          function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-          }
-          
-          function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-          }
-          </script>
-         
 
-          <script>
-            function myFunction() {
-              window.history.back();
-            }
-            </script>
 
     </body>
 </html>';
