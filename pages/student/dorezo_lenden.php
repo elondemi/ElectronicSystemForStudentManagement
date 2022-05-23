@@ -1,5 +1,7 @@
 <?php
-$html = '
+
+require "../../resources/parts/header_student.php";
+$html1 = '
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,34 +11,10 @@ $html = '
 
 
     </head>  
-    <body>     
-        <div class="top">
-          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-          <!-- e ueb sajtit duhet të përmbaj patjetër këto meny: Home,
-          Lëndët, Detyrat e mia, Vlerësimet, Dorëzo detyrën, FAQ. Profili, -->
-          <img class="logo" src="../../resources/assets/images/logo.png" alt="Logo" style="width:110px">
-        </div>    
-         <br><br>
-         <div id="mySidenav" class="sidenav">
-            <img src="../../resources/assets/images/slide/prof_img1.jpg" alt="Avatar" style="width: 100px">
-            <br><br>
-            <form action="xxxx.php" method="post">
-             <span style="margin-left:25px"><input type="text" name="name_student"><br></form></span>
-            <p>Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike</p>
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="studentpage.php">Home</a>
-            <br><br>
-            <p class="asd">Menyte</p>
+    <body>';     
+       
           
-            <a href="lendet.php">Lëndët</a>
-            <a href="detyrat.php">Detyrat e mia</a>
-            <a href="dorezo_lenden.php">Dorëzo detyrën</a>
-            <a href="vleresimet.php">Vlerësimet</a>
-            <a href="../../FAQ.php">FAQ</a>
-            <a href="profili.php">Profili</a>
-          </div>
-          
-          
+          $html2 = '
           <h1 style="margin-left:300px;">Dorëzo Detyrën</h1><hr>
  <br><br><br><br>
           
@@ -54,7 +32,7 @@ $html = '
                          <td>
                           <select name="lenda" id="lenda">
                             <option value="Programimi" name="Programimi">Programimi</option>
-                           <option value="Baza e te dhenave" name ="Baza_ete_dhenave">Baza e te dhenave</option>
+                           <option value="Baza e te dhenave" name ="Baza_te_dhenave">Baza e te dhenave</option>
                            <option value="Sistemet Operative" name="Sisteme_Operative">Sistemet Operative</option>
                            <option value="Algoritme" name="Algoritme">Algorimte</option>
                            </select>
@@ -101,6 +79,8 @@ $html = '
 </html>
 ';
 
-echo $html;
+echo $html1;
+render_header();
+echo $html2;
 
 ?>
