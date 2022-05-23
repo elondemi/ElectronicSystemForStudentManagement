@@ -94,7 +94,7 @@ body{
           
             <a href="lendet.php">Lëndët</a>
             <a href="detyrat.php">Detyrat e mia</a>
-            <a href="dorezo_detyren.php">Dorëzo detyrën</a>
+            <a href="dorezo_lenden.php">Dorëzo detyrën</a>
             <a href="vleresimet.php">Vlerësimet</a>
             <a href="../../FAQ.php">FAQ</a>
             <a href="profili.php">Profili</a>

@@ -96,32 +96,33 @@ body{
     </head>  
     <body>     
         <div class="top">
+          
           <!-- e ueb sajtit duhet të përmbaj patjetër këto meny: Home,
           Lëndët, Detyrat e mia, Vlerësimet, Dorëzo detyrën, FAQ. Profili, -->
           
-          <img class="logo" src="../../resources/assets/images/logo.png" alt="Logo" style="width:110px">
+          <img class="logo" src="assets/img/logo.png" alt="Logo" style="width:110px">
         </div>    
          <br><br>
          <div id="mySidenav" class="sidenav">
-            <img src="../../resources/assets/images/slide/prof_img1.jpg" alt="Avatar" style="width: 100px">
+            <img src="assets/img/slide/prof_img1.jpg" alt="Avatar" style="width: 100px">
             <br><br>
             <form action="xxxx.php" method="post">
-               <input type="text" name="name_student"><br></form>
+              <span style="margin-left:25px"><input type="text" name="name_student"><br></form></span>
             <p>Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike</p>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="studentpage.php">Home</a>
+            <a href="studentpage.html">Home</a>
             <br><br>
             <p class="asd">Menyte</p>
           
-            <a href="lendet.php">Lëndët</a>
-            <a href="detyrat.php">Detyrat e mia</a>
-            <a href="dorezodet.php">Dorëzo detyrën</a>
-            <a href="vleresimet.php">Vlerësimet</a>
-            <a href="../../FAQ.php">FAQ</a>
-            <a href="profili.php">Profili</a>
+            <a href="lendet.html">Lëndët</a>
+            <a href="detyrat.html">Detyrat e mia</a>
+            <a href="dorezodet.html">Dorëzo detyrën</a>
+            <a href="vleresimet.html">Vlerësimet</a>
+            <a href="FAQ.html">FAQ</a>
+            <a href="profili.html">Profili</a>
           </div>
        
-          <a href="lendet.html" style="color:rgb(11, 2, 51);font-weight: bold;">Kthehu mbrapa</a>
+          <button onclick="myFunction()">Kthehu mbrapa</button>
              
           <br><br><br>
 
@@ -137,8 +138,10 @@ body{
               <th>Titulli i Detyrës</th>
               <th>Përshkrimin</th>
               <th>Kohën e Dorëzimit</th>
-              <th>Specifat e Detyrës </th>
+              <th>Specifikat e Detyrës </th>
             </tr>  
+
+      
           </table>
 
 
@@ -157,6 +160,13 @@ body{
             document.getElementById("mySidenav").style.width = "0";
           }
           </script>
+         
+
+          <script>
+            function myFunction() {
+              window.history.back();
+            }
+            </script>
 
     </body>
 </html>';
