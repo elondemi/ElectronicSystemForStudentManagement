@@ -286,6 +286,14 @@ $html1 = '
         </div>
 
   </main><!-- End #main -->
+<div style="position:relative;left:35%;>
+  <form action="xxx.php" >
+  <textarea id="subject" name="bej_pyetje" placeholder="Sheno pyetjen tende..." style="height:200px;width:400px;"></textarea>
+<input type="submit" name="dergo_pyetjen" value="Dergo Pyetjen" class="social facebook"></input> 
+
+</form>	
+
+</div>
  ';
  
  $html3 ='
@@ -296,9 +304,12 @@ $html1 = '
   <script src="resources/assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="resources/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="resources/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="resources/assets/vendor/php-email-form/validate.js"></script>resources/
+  <script src="resources/assets/vendor/php-email-form/validate.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
+
 
 </body>
 

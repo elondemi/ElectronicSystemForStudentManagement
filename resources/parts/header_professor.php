@@ -18,7 +18,9 @@ function render_header() {
  
       <!-- Uncomment below if you prefer to use an image logo -->
       <a href="../../index.php" class="logo"><img src="../../resources/assets/images/logo.png" alt="" class=""></a>
-
+      <form >
+      <label name="emri_profesorit" >  emri i profesorit </label>
+      </form>
       <nav id="navbar" class="navbar">
         <ul>
           <li><a ' .  activeIf("project_php/pages/professor/lendet.php") . ' style="color: rgb(11, 126, 9);" href="lendet.php">Lendet </a></li>
