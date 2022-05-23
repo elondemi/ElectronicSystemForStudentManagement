@@ -11,12 +11,12 @@ $html = '<!DOCTYPE html>
 	<div id="login-box">
 		<div class="left-box">
 			<h1>Modifiko lëndën</h1>
-			<form action="lendet.php" method="post">
-				<textarea id="subject" name="subject" placeholder="Modifiko përshkrimin e lëndës..." style="height:200px"></textarea>
+	<form action="lendet.php" method="post">
+				<textarea id="subject" name="modifiko_lenden" placeholder="Modifiko përshkrimin e lëndës..." style="height:200px"></textarea>
 		</div>		
 		<div class="right-box">
 			<span class="signinwith">Ketu mund te modifikoni </br> lenden! </span>
-			<input type="submit" value="Modifiko" class="social facebook"></input> 
+			<input type="submit" name="modifiko" value="Modifiko" class="social facebook"></input> 
 		</div>
 	</form>	
 	</div>
