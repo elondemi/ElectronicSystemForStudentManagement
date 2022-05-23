@@ -13,8 +13,8 @@ $html = '
 
 			<form action="login.php" >
 			<h1>Regjistrohu</h1>
-				<input type="text" name="username" placeholder="Emri"/>
-				<input type="text" name="username" placeholder="Mbiemri"/>
+				<input type="text" name="Name" placeholder="Emri"/>
+				<input type="text" name="Surname" placeholder="Mbiemri"/>
 				<label>Roli: </label> 
 				<label>Student</label>
 				<input type="radio" name="Role" />
