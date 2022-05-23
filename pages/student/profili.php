@@ -9,6 +9,7 @@ $html1 = '<!DOCTYPE html>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <link href="../../resources/assets/css/student.css" rel="stylesheet">
+        <script src="../../resources/assets/js/student.js"></script>
     </head>  
     <body>';     
                  
@@ -66,22 +67,7 @@ $html1 = '<!DOCTYPE html>
           </div>
 
 
-          <script>
-          function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-          }
-          
-          function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-          }
-          </script>
-      <script>
-      
-          $("#show").click(function(){
-            $("change_p").show();
-          });
-        
-        </script>
+         
 
     </body>
 </html>';
