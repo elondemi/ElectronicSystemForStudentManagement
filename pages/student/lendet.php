@@ -29,23 +29,23 @@ $html1 = '<!DOCTYPE html>
             <tr>
               <td>Programimi në internet</td>
               <td>Dhurate Hyseni</td>
-              <th><a href="lista.html" style="color:white;">Detyrat </a></th>
+              <th><a href="lista.php" style="color:white;">Detyrat </a></th>
               
             </tr>
             <tr>
               <td>Baza e të Dhënave</td>
               <td>Dhurate Hyseni</td>
-              <th><a href="lista.html"style="color:white;">Detyrat </a></th>
+              <th><a href="lista.php"style="color:white;">Detyrat </a></th>
             </tr>
             <tr>
               <td>Programimi në Objekte</td>
               <td>Dhurate Hyseni</td>
-              <th><a href="lista.html"style="color:white;">Detyrat </a></th>
+              <th><a href="lista.php"style="color:white;">Detyrat </a></th>
             </tr>
             <tr>
               <td>Algoritmet dhe Struktura</td>
               <td>Dhurate Hyseni</td>
-              <th><a href="lista.html"style="color:white;">Detyrat </a></th>
+              <th><a href="lista.php"style="color:white;">Detyrat </a></th>
             </tr>
           
           </table>
