@@ -3,7 +3,7 @@
 require "resources/parts/header.php";
 require "resources/parts/footer.php";
 
-$html1 = '
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,8 +40,11 @@ $html1 = '
 
 <body>
 
-    ';
-    $html2 ='
+   
+
+
+    <?php render_header() ?>
+ 
 
   <link rel="stylesheet" href="//cdn.materialdesignicons.com/3.7.95/css/materialdesignicons.min.css">
 <div class="container">
@@ -286,17 +289,15 @@ $html1 = '
         </div>
 
   </main><!-- End #main -->
-<div style="position:relative;left:35%;>
+<div style="position:relative;left:35%;">
   <form action="xxx.php" >
-  <textarea id="subject" name="bej_pyetje" placeholder="Sheno pyetjen tende..." style="height:200px;width:400px;"></textarea>
-<input type="submit" name="dergo_pyetjen" value="Dergo Pyetjen" class="social facebook"></input> 
-
-</form>	
-
+        <textarea id="subject" name="bej_pyetje" placeholder="Sheno pyetjen tende..." style="height:200px;width:400px;"></textarea>
+      <input type="submit" name="dergo_pyetjen" value="Dergo Pyetjen" class="social facebook"></input> 
+  </form>	
 </div>
- ';
- 
- $html3 ='
+
+<?php render_footer() ?>
+
 
   <!-- Vendor JS Files -->
   <script src="resources/assets/vendor/purecounter/purecounter.js"></script>
@@ -314,11 +315,3 @@ $html1 = '
 </body>
 
 </html>
-';
-echo $html1;
-render_header();
-echo $html2;
-render_footer();
-echo $html3;
-
-?>

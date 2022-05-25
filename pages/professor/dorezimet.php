@@ -2,9 +2,9 @@
 
 require "../../resources/parts/header_professor.php";
 require "../../resources/parts/footer.php";
+?>
 
-
-$html1 ='<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -36,12 +36,12 @@ $html1 ='<!DOCTYPE html>
 
 </head>
 
-<body>';
+<body>
 
 
 
+<?php render_header() ?>
 
-$html2 = ' 
 <div style="position: relative; width: 100%; top: 120px;">
       <table  class="table">
         <thead>
@@ -81,16 +81,9 @@ $html2 = '
         </tbody>
       </table>
         </div>
-  ';
-    
 
-   
-
-    
-
-    
-
-$html3 ='
+        
+  <?php render_footer() ?>
 
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -108,13 +101,4 @@ $html3 ='
 
 </body>
 
-</html>';
-
-echo $html1;
-render_header();
-echo $html2;
-render_footer();
-echo $html3;
-
-
-?>
+</html>

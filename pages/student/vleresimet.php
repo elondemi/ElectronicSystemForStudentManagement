@@ -1,7 +1,7 @@
 <?php
-
 require "../../resources/parts/header_student.php";
-$html1 ='<!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html>
     <head>
         <title>Studentpage</title>
@@ -9,8 +9,8 @@ $html1 ='<!DOCTYPE html>
         <link href="../../resources/assets/css/student.css" rel="stylesheet">
         <script src="../../resources/assets/js/student.js"></script>  
     </head>  
-    <body>';     
-       $html2 ='
+    <body>
+      <?php render_header() ?>     
           <h1 style="margin-left:300px;margin: bottom 40px;">Vlerësimet</h1><hr>
           <table id="customers">
             <tr>
@@ -21,8 +21,4 @@ $html1 ='<!DOCTYPE html>
             </tr>     
           </table>
     </body>
-</html>';
-echo $html1;
-render_header();
-echo $html2;
-?>
+</html>

@@ -1,9 +1,9 @@
 <?php
 
 require "../../resources/parts/header_student.php";
+?>
 
-
-$html1 = '<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <title>Studentpage</title>
@@ -11,8 +11,9 @@ $html1 = '<!DOCTYPE html>
         <link href="../../resources/assets/css/student.css" rel="stylesheet">
         <script src="../../resources/assets/js/student.js"></script>
     </head>  
-    <body>';    
-         $html2='         
+    <body>
+      <?php render_header() ?>    
+           
 <div class="GrafikuN">
     <h1>...Grafika e Notav</h1>
     <hr>
@@ -47,10 +48,4 @@ $html1 = '<!DOCTYPE html>
     </script>
     </div>
     </body>
-</html>';
-
-echo $html1;
-render_header();
-echo $html2;
-
-?>
+</html>

@@ -3,8 +3,8 @@
 require "resources/parts/header.php";
 require "resources/parts/footer.php";
 
-
-$html1 = '<!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -32,68 +32,14 @@ $html1 = '<!DOCTYPE html>
 
   <!-- Template Main CSS File -->
   <link href="resources/assets/css/style.css" rel="stylesheet">
-  <style>
-    div.gallery {
-      border: 1px solid #ccc;
-    }
-    
-    div.gallery:hover {
-      border: 1px solid #777;
-    }
-    
-    div.gallery img {
-      width: 100%;
-      height: auto;
-    }
-    
-    div.desc {
-      padding: 15px;
-      text-align: center;
-    }
-    
-    * {
-      box-sizing: border-box;
-    }
-    
-    .responsive {
-      padding: 0 6px;
-      float: left;
-      width: 24.99999%;
-    }
-    
-    @media only screen and (max-width: 700px) {
-      .responsive {
-        width: 49.99999%;
-        margin: 6px 0;
-      }
-    }
-    
-    @media only screen and (max-width: 500px) {
-      .responsive {
-        width: 100%;
-      }
-    }
-    
-    .clearfix:after {
-      content: "";
-      display: table;
-      clear: both;
-      
-    }
-    p.outset {border-style: outset;}
-    </style>
+  <link href="resources/assets/css/about.css" rel="stylesheet">
 
 </head>
 
 <body>
 
-    ';
+    <?php render_header() ?>
     
-    $html2 ='
-  
-   <br><br><br><br><br><br>
-
-
    <p class="outset">The staff:</p>
 
   <br>
@@ -130,8 +76,8 @@ $html1 = '<!DOCTYPE html>
 
 <div class="clearfix"></div>
    
-';
-$html3 = '
+
+ <?php  render_footer() ?>
 
 <!-- Vendor JS Files -->
 <script src="resources/assets/vendor/purecounter/purecounter.js"></script>
@@ -147,11 +93,3 @@ $html3 = '
 </body>
 
 </html>
-
-';
-echo $html1;
-render_header();
-echo $html2;
-render_footer();
-echo $html3;
-?>

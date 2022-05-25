@@ -1,8 +1,8 @@
 <?php 
 
     require "../../resources/utils/db.php";
-
-    $html = '<!DOCTYPE html>
+?>
+    <!DOCTYPE html>
     <html>
     <head>
         <title></title>
@@ -27,7 +27,3 @@
     </body>
     </html>';
 
-    echo $html;
-
-
-?>

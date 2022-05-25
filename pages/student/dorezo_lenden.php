@@ -1,6 +1,6 @@
 <?php
 require "../../resources/parts/header_student.php";
-$html1 = '
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,8 +9,8 @@ $html1 = '
     <link href="../../resources/assets/css/student.css" rel="stylesheet">
     <script src="../../resources/assets/js/student.js"></script>
   </head>  
-  <body>';     
-    $html2 = '
+  <body>     
+    <?php render_header() ?>
      <h1 style="margin-left:300px;margin-bottom: 40px;">Dorëzo Detyrën</h1><hr>
         <form action="xxxx.php" method="POST">
            <table id="customers">
@@ -56,10 +56,3 @@ $html1 = '
         </form>
     </body>
 </html>
-';
-
-echo $html1;
-render_header();
-echo $html2;
-
-?>

@@ -1,6 +1,7 @@
 <?php
+	require_once 'resources/FormHandlers/signup.php';
+?>
 
-$html = '
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,20 +12,20 @@ $html = '
 	<div id="login-box">
 		<div class="left-box">	
 
-			<form action="login.php" >
+			<form action="signup.php"  method="post">
 			<h1>Regjistrohu</h1>
+				<label style="text-color:red;" name="error"> <?php $error ?> </label>
 				<input type="text" name="Name" placeholder="Emri"/>
 				<input type="text" name="Surname" placeholder="Mbiemri"/>
 				<label>Roli: </label> 
 				<label>Student</label>
-				<input type="radio" name="Role" />
+				<input type="radio" name="Role" value="student" />
 				<label>Prof/Ass</label>
-				<input type="radio" name="Role" />
+				<input type="radio" name="Role" value="prof/ass" />
 				<input type="password" name="Password" placeholder="Password"/>
 				<input type="password" name="Conf_Password" placeholder="Confirm Password"/>
-				<input type="email" name="Email" placeholder="Email"/>
-				<input type="email" name="Conf_Email" placeholder="Confirm Email"/>				
-				<input type="submit" value="Sign Up" class="social facebook" >
+				<input type="email" name="Email" placeholder="Email"/>		
+				<input type="submit" name="signup" value="Sign Up" class="social facebook" >
 			</form>
 		
 		</div>
@@ -32,8 +33,5 @@ $html = '
 	</div>	
 </body>
 </html>
-';
 
-echo $html;
 
-?>

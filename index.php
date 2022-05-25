@@ -4,8 +4,8 @@
 require "resources/parts/header.php";
 require "resources/parts/footer.php";
 
+?>
 
-$html1 = '
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,8 +18,8 @@ $html1 = '
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="resources/assets/img/favicon.png" rel="icon">
-  <link href="resources/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="resources/assets/images/favicon.png" rel="icon">
+  <link href="resources/assets/images/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -40,9 +40,7 @@ $html1 = '
 
 <body>
 
-  ';
-  
-  $html2= '
+<?php render_header() ?>
   <section id="hero">
     <div class="hero-container">
       <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -82,9 +80,9 @@ $html1 = '
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown"><pre>
- Nënshkruhet marrveshja në mes të FIEK
- dhe
-Odës Ekonomike Amerikane</pre></h2>
+                            Nënshkruhet marrveshja në mes të FIEK
+                            dhe
+                            Odës Ekonomike Amerikane</pre></h2>
                
                 <div>
                   <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Lexo me shume</a>
@@ -129,17 +127,14 @@ Odës Ekonomike Amerikane</pre></h2>
       </div>
     </section><!-- End About Section -->
 
-   ';
-   
-   
-   $html3 = '
+   <?php  render_footer() ?>
    <!-- Vendor JS Files -->
-<script src="resources/assets/vendor/purecounter/purecounter.js"></script>
-<script src="resources/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="resources/assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="resources/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="resources/assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="resources/assets/vendor/php-email-form/validate.js"></script>
+      <script src="resources/assets/vendor/purecounter/purecounter.js"></script>
+      <script src="resources/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="resources/assets/vendor/glightbox/js/glightbox.min.js"></script>
+      <script src="resources/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <script src="resources/assets/vendor/swiper/swiper-bundle.min.js"></script>
+      <script src="resources/assets/vendor/php-email-form/validate.js"></script>
 
 <!-- Template Main JS File -->
 <script src="resources/assets/js/main.js"></script>
@@ -147,11 +142,3 @@ Odës Ekonomike Amerikane</pre></h2>
 
 </html>
 
-';
-
-echo $html1;
-render_header();
-echo $html2;
-render_footer();
-echo $html3;
-?>

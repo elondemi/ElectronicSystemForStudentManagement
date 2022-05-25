@@ -1,9 +1,9 @@
 <?php
     require "../../resources/parts/header_professor.php";
     require "../../resources/parts/footer.php";
-
-
-    $html1 = '<!DOCTYPE html>
+l 
+?>
+    <!DOCTYPE html>
     <html lang="en">
     
     <head>
@@ -37,9 +37,7 @@
     
     <body>
     
-    ';
-    $html2='   
-    
+   <?php render_header() ?>
     
      <div style="position: relative; width: 100%; top: 120px;">
       <table  class="table">
@@ -86,9 +84,7 @@
 
        <a href="shto_lende.php"> <button type="button" style="position:relative;left:80%;top:120px;" class="btn btn-success">Shto lëndë</button> </a>
     
-        
-    ';
-    $html3 = '
+    <?php  render_footer() ?>
     
       <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
     
@@ -105,11 +101,4 @@
     
     </body>
     
-    </html>';
-
-    echo $html1;
-render_header();
-echo $html2;
-render_footer();
-echo $html3;
-?>
+    </html>

@@ -1,7 +1,8 @@
 <?php
 
+?>
 
-$html = '<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title></title>
@@ -21,7 +22,5 @@ $html = '<!DOCTYPE html>
 	</form>	
 	</div>
 </body>
-</html>';
+</html>
 
-echo $html;
-?>

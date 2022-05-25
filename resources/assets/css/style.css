@@ -436,7 +436,7 @@ section {
   margin-left: 60px;
 }
 .about .image {
-  background: url("../img/abo.jpg") center center no-repeat;
+  background: url('../images/abo.jpg')  center center no-repeat;
   background-size: cover;
   min-height: 400px;
 }
@@ -1288,3 +1288,4 @@ section {
   font-size: 13px;
   color: #fff;
 }
+

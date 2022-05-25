@@ -10,7 +10,7 @@ $tableName8 = "relation_assignment_professor_student";
 
 
 $sql2 = "CREATE TABLE $tableName2(
-        student_id int,
+        student_id int ,
         student_name varchar(45),
         student_surname varchar(45),
         student_password varchar(45),

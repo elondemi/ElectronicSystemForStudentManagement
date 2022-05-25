@@ -1,6 +1,8 @@
 <?php
 
-$html = '
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,9 +29,5 @@ $html = '
 	</div>
 </body>
 </html>
-';
-
-echo $html;
 
 
-?>

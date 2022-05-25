@@ -1,6 +1,7 @@
 <?php
 require "../../resources/parts/header_student.php";
-$html1 = '<!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html>
     <head>
         <title>Studentpage</title>
@@ -8,8 +9,8 @@ $html1 = '<!DOCTYPE html>
         <link href="../../resources/assets/css/student.css" rel="stylesheet">
         <script src="../../resources/assets/js/student.js"></script>
     </head>  
-    <body>';        
-       $html2 = '
+    <body>
+      <?php render_header() ?>     
           <form action="xxxxx.php" method="POST" >
             <h1>
             <label for="lista">Lista e Detyrave nga Lënda </label>
@@ -25,8 +26,4 @@ $html1 = '<!DOCTYPE html>
             </tr> 
           </table>
     </body>
-</html>';
-echo $html1;
-render_header();
-echo $html2;
-?>
+</html>

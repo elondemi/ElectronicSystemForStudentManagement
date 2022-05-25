@@ -1,8 +1,8 @@
 <?php
  
  require "../../resources/parts/header_student.php";
+?>
 
- $html1 = '
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,8 +11,9 @@
         <link href="../../resources/assets/css/student.css" rel="stylesheet">
         <script src="../../resources/assets/js/student.js"></script>
     </head>  
-<body>';     
-$html2 ='
+<body>    
+  <?php render_header() ?>
+  
   <h1 style="margin-left:300px;">Detyrat e mia</h1><hr><br>
   <table id="customers">
     <tr>
@@ -23,9 +24,3 @@ $html2 ='
   </table>          
 </body>
 </html>
-';
-    echo $html1;
-    render_header();
-    echo $html2;
-
-?>
