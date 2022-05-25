@@ -39,19 +39,19 @@ require "../../resources/parts/header_student.php";
         <hr>
         <div style="margin-left:100px;margin-top: 60px;">
         <form action="/xxxxx.php" method="POST">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username"><br><br>
-                <label for="email_z">E-mail Zyratar:</label>
-                <input type="text" id="email_z" name="email_z"><br><br>
-                <label for="email">E-mail :</label>
-                <input type="text" id="email" name="email"><br><br>
-                <label for="telefoni">Telefoni :</label>
-                <input type="text" id="telefoni" name="telefoni"><br><br>
-                <label for="adresa">Adresa :</label>
-                <input type="text" id="adresa" name="adresa"><br><br>
-                <button id="show">Ndysho Fjalekalimin</button>
-                <input type="text" id="change_p" name="change_p"><br><br>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="email_z">E-mail Zyratar:</label>
+        <input type="text" id="email_z" name="email_z"><br><br>
+        <label for="email">E-mail :</label>
+        <input type="text" id="email" name="email"><br><br>
+        <label for="telefoni">Telefoni :</label>
+        <input type="text" id="telefoni" name="telefoni"><br><br>
+        <label for="adresa">Adresa :</label>
+        <input type="text" id="adresa" name="adresa"><br><br>
+      
         </form>
+        <button><a href="modifiko_profilin.php">Modifiko te dhenat</a></button>
         </div>
         </div>
         </div>
