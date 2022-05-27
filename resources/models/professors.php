@@ -20,8 +20,8 @@ class professors{
     private $professor_password;
 
 
-    function __construct($professor_name,$professor_surname,$professor_role,$professor_email,$professor_password) {
-        
+    function __construct($professor_id,$professor_name,$professor_surname,$professor_role,$professor_email,$professor_password) {
+        $this->professor_id=$professor_id;
         $this->professor_name=$professor_name;
         $this->professor_surname=$professor_surname;
         $this->professor_role=$professor_role;

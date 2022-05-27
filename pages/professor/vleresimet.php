@@ -2,6 +2,21 @@
 
 require "../../resources/parts/header_professor.php";
 require "../../resources/parts/footer.php";
+
+session_start();
+if(isset($_SESSION['logged_user'])){
+
+  require_once __DIR__ . "/../../resources/query_handler/ProfessorRepository.php";
+  
+  require_once __DIR__ . "/../../resources/query_handler/CoursesRepository.php";
+  if($_SESSION['user_type'] == 'professor'){
+    $professor = (new ProfessorRepository())->selectProfessor((int)$_SESSION['logged_user']);
+    $subjects = (new CoursesRepository())->selectAllSubjects($professor);
+
+  }
+} else {
+  //useri nuk eshte logu 
+}
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +52,7 @@ require "../../resources/parts/footer.php";
 </head>
 
 <body>
-<?php  render_header() ?>
+<?php render_header($professor) ?>
 
 <div style="position: relative; width: 100%; top: 120px;">
 <table  class="table">

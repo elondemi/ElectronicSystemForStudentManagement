@@ -1,7 +1,21 @@
 <?php
     require "../../resources/parts/header_professor.php";
     require "../../resources/parts/footer.php";
-l 
+    session_start();
+    if(isset($_SESSION['logged_user'])){
+
+      require_once __DIR__ . "/../../resources/query_handler/ProfessorRepository.php";
+      
+      require_once __DIR__ . "/../../resources/query_handler/CoursesRepository.php";
+      if($_SESSION['user_type'] == 'professor'){
+        $professor = (new ProfessorRepository())->selectProfessor((int)$_SESSION['logged_user']);
+        $subjects = (new CoursesRepository())->selectAllSubjects($professor);
+
+      }
+    } else {
+      //useri nuk eshte logu 
+    }
+     
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -37,7 +51,7 @@ l
     
     <body>
     
-   <?php render_header() ?>
+   <?php render_header($professor) ?>
     
      <div style="position: relative; width: 100%; top: 120px;">
       <table  class="table">
@@ -53,31 +67,17 @@ l
           </tr>
         </thead>
         <tbody>
+          <?php foreach($subjects as $course): ?>
           <tr>
-            <th scope="row">1</th>
-            <td>Interneti</td>
-            <td>Lenda ka te bej <br> rreth html, css, javascript </td>
-            <td>5</td>
-            <td>3</td>
-            <td> <a href="modifiko_lenden.php"> <button type="button" class="btn btn-primary">Modifiko lëndën</button> </a>
+            <th scope="row"><?= $course->getCourse_id() ?></th>
+            <td><?= $course->getCourse_name() ?></td>
+            <td><?= $course->getCourse_description() ?> </td>
+            <td><?= $course->getCourse_ects() ?></td>
+            <td><?= $course->getCourse_semester() ?></td>
+            <td> <a href="modifiko_lenden.php?course_id=<?= $course->getCourse_id() ?>"> <button type="button" class="btn btn-primary">Modifiko lëndën</button> </a>
             </td>
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>POO</td>
-            <td>Lenda ka te bej <br> rreth gjuhes programuese java </td>
-            <td>5</td>
-            <td>3</td>
-            <td><a href="modifiko_lenden.php"> <button type="button" class="btn btn-primary">Modifiko lëndën</button> </a></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>KNK</td>
-            <td>Lenda ka te bej <br> rreth zhivilimit te aplikacioneve </td>
-            <td>5</td>
-            <td>4</td>
-            <td><a href="modifiko_lenden.php"> <button type="button"  class="btn btn-primary">Modifiko lëndën</button> </a></td>
-          </tr>
+          <?php endforeach; ?>
         </tbody>
       </table>
         </div>

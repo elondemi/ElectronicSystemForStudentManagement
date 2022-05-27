@@ -52,7 +52,7 @@ class courses{
 
     public function setCourse_description($course_description)
     {
-        $this->course_description = $course_description
+        $this->course_description = $course_description;
     }
 
 

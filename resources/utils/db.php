@@ -6,7 +6,7 @@ Class Database
     private $host;
     private $pass ;
     private $db;
-    private $conn;
+    public $conn;
 
     public function __construct()
     {
@@ -26,6 +26,12 @@ Class Database
        return $this;
 
     }
+
+    // public function executeRaw($raw){
+    //     $stmt = $this->conn->prepare($raw);
+    //     $stmt->execute();
+    //     return $stmt;
+    // }
 
     public function execute($query, $bindtypes = null, $params = null){
         $stmt = $this->conn->prepare($query);

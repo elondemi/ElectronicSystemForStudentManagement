@@ -21,8 +21,8 @@ function render_header() {
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a ' .  activeIf("project_php/index.php") . ' style="color: rgb(11, 126, 9);" href="index.php">Faqja Kyresore</a></li>
-          <li><a ' .  activeIf("project_php/about.php") . ' href="about.php" style="color: rgb(11, 126, 9);">Rreth Nesh</a></li>
+          <li><a ' .  activeIf("/projekti_PI/index.php") . ' style="color: rgb(11, 126, 9);" href="index.php">Faqja Kyresore</a></li>
+          <li><a ' .  activeIf("/projekti_PI/about.php") . ' href="about.php" style="color: rgb(11, 126, 9);">Rreth Nesh</a></li>
           <li><a href="login.php" style="color: rgb(11, 126, 9);">SEMS</a></li>
         
          
