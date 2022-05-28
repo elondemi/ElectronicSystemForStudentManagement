@@ -33,4 +33,8 @@ function closeNav() {
         }
       }
     });
+    
+function myFunction() {
+  window.history.back();
+}
   

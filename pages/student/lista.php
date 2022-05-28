@@ -9,6 +9,9 @@ require "../../resources/parts/header_student.php";
         <link href="../../resources/assets/css/student.css" rel="stylesheet">
         <script src="../../resources/assets/js/student.js"></script>
     </head>  
+
+    <button onclick="myFunction()">Kthehu Mbrapa</button>
+
     <body>
       <?php render_header() ?>     
           <form action="xxxxx.php" method="POST" >
