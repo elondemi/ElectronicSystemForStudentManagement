@@ -23,15 +23,14 @@ require "../../resources/parts/header_student.php";
         <img class="foto" src="assets/img/slide/prof_img1.jpg" alt="foto" style="width: 150px"><br>
         <br>
         <form action="/xxxxx.php" method="POST">
-                <span style="margin-left: 165px;"><label for="name_student"></label>
-                <input type="text" id="name_student" name="name_student"><br></span>
+                <span style="margin-left: 165px;"><label name="emri_studenti" >  ' . $studenti->getStudent_name() . " " . $studenti->getStudent_surname() . ' </label><br></span>
                 <p style="color:rgb(207, 204, 204);font-size:14px;">Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike </p><br><br>
                 <span style="margin-left:50px;"><label for="nr_personal">Nr Personal</label><hr>
-                <input type="text" id="nr_personal" name="nr_personal"><br><br></span>
+                <label name="nr_personal" >  ' . $studenti->getStudent_nr_personal() .  ' </label><br><br></span>
                 <span style="margin-left:50px;"> <label for="datelindja">Datelindja</label><hr>
-                <input type="text" id="datelindja" name="datelindja"><br><br></span>
+                <label name="datelindja" >  ' . $studenti->getStudent_datelindja() .  ' </label><br><br></span>
                 <span style="margin-left:50px;"><label for="Gjinia">Gjinia</label><hr>
-                <input type="text" id="Gjinia" name="Gjinia"><br><br></span>
+                <label name="gjinia" >  ' . $studenti->getStudent_gjinia() .  ' </label><br><br></span>
          </form>
           </div>
           <div class="profili2">
@@ -40,15 +39,15 @@ require "../../resources/parts/header_student.php";
         <div style="margin-left:100px;margin-top: 60px;">
         <form action="/xxxxx.php" method="POST">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username"><br><br>
-        <label for="email_z">E-mail Zyratar:</label>
-        <input type="text" id="email_z" name="email_z"><br><br>
+        <label name="username" >  ' . $studenti->getStudent_username() . ' </label><br><br>
+        <label for="emailz">E-mail Zyratar:</label>
+        <label name="emailz" >  ' . $studenti->getStudent_emailz() . ' </label><br><br>
         <label for="email">E-mail :</label>
-        <input type="text" id="email" name="email"><br><br>
+        <label name="email" >  ' . $studenti->getStudent_email() . ' </label><br><br>
         <label for="telefoni">Telefoni :</label>
-        <input type="text" id="telefoni" name="telefoni"><br><br>
+        <label name="telefoni" >  ' . $studenti->getStudent_telefoni() .  ' </label><br><br>
         <label for="adresa">Adresa :</label>
-        <input type="text" id="adresa" name="adresa"><br><br>
+        <label name="adresa" >  ' . $studenti->getStudent_adresa() .  ' </label><br><br>
       
         </form>
         <button><a href="modifiko_profilin.php">Modifiko te dhenat</a></button>

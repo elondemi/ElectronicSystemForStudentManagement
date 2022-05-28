@@ -17,7 +17,7 @@ require "../../resources/parts/header_student.php";
           <form action="xxxxx.php" method="POST" >
             <h1>
             <label for="lista">Lista e Detyrave nga Lënda </label>
-            <input type="text" id="lenda" name="lenda"></h1><br><br>
+            <label name="emri_lenda" >  ' . $lenda->getLenda_name() . ' </label>
           </form>
           <hr>
           <table id="customers">
