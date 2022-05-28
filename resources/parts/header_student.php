@@ -10,7 +10,7 @@ function render_header() {
   </div>    
    <br><br>
    <div id="mySidenav" class="sidenav">
-      <img src="assets/img/slide/prof_img1.jpg" alt="Avatar" style="width: 100px">
+      <img src="../../resources/assets/images/prof_img1.jpg" alt="Avatar" style="width: 100px">
       <br><br>
       <form action="xxxx.php" method="POST">
         <span style="margin-left:25px"><input type="text" name="name_student"><br></span>
