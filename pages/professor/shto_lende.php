@@ -1,6 +1,7 @@
 <?php 
 
     require "../../resources/utils/db.php";
+    require "../../resources/FormHandlers/lendet/shto.php";
 ?>
     <!DOCTYPE html>
     <html>
@@ -12,7 +13,7 @@
         <div id="login-box">
             <div class="left-box">
                 <h1>Shto lëndë</h1>
-                <form action="modifiko_lenden.php?course_id=<?= $course->getCourse_id() ?>"  method="post">
+                <form action="shto_lende.php"  method="post">
                     <input type="text" name="emri_lendes" placeholder="Emri i lëndës"/>
                     <input type="text" name="pershkrimi_lendes" placeholder="Pershkrimi i lëndës"/>
                     <input type="text" name="ects" placeholder="ECTS"/>

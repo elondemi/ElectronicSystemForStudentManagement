@@ -64,6 +64,7 @@ class CoursesRepository
     }
 
 
+
     public function updateCourse(courses $course) {
         $builder = UpdateQueryBuilder::create('courses')
             ->add('course_description', $course->getCourse_description())
@@ -75,14 +76,30 @@ class CoursesRepository
         return;
     }
 
-    // public function addCourse(course $name, course $description, course $ects, course $semester){
-    //     $builder = InsertQueryBuilder::create('courses')
-    //     ->add('course_name', $name -> getCourse_name())
-    //     ->add('course_description', $description -> getCourse_description())
-    //     ->add('course_ects', $ects -> getCourse_ects())
-    //     ->add('course_semester', $semester -> getCourse_semester())
+    public function addCourse(courses $course){
+        $builder = InsertQueryBuilder::create('courses')
+        ->add('course_name', $course -> getCourse_name())
+        ->add('course_description', $course -> getCourse_description())
+        ->add('course_ects', $course -> getCourse_ects())
+        ->add('course_semester', $course -> getCourse_semester());
+        $bindparamTypes =  implode(array_map(fn($el) => $builder->detectType($el), $builder->getValues()));
+        $stmt = $this->connection->execute($builder->getQuery(), $bindparamTypes, $builder->getValues());
+        $insert_id = $stmt->insert_id;
+        $course->setCourse_id($insert_id);
 
-    // }
+        return $course;
+    }
+
+    public function linkToProfessor(courses $course, professors $professor) {
+        $builder = InsertQueryBuilder::create('relation_professor_course')
+        ->add('professor_id', $professor->getProfessor_id())
+        ->add('course_id', $course->getCourse_id());
+        $bindparamTypes =  implode(array_map(fn($el) => $builder->detectType($el), $builder->getValues()));
+        $stmt = $this->connection->execute($builder->getQuery(), $bindparamTypes, $builder->getValues());
+        return;
+        
+    }
+
 }
 
 

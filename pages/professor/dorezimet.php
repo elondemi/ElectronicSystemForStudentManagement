@@ -9,12 +9,14 @@ session_start();
 if(isset($_SESSION['logged_user'])){
 
   require_once __DIR__ . "/../../resources/query_handler/ProfessorRepository.php";
-  
   require_once __DIR__ . "/../../resources/query_handler/CoursesRepository.php";
+  require_once __DIR__ . "/../../resources/query_handler/AssignmentRepository.php";
   if($_SESSION['user_type'] == 'professor'){
     $professor = (new ProfessorRepository())->selectProfessor((int)$_SESSION['logged_user']);
     $subjects = (new CoursesRepository())->selectAllSubjects($professor);
-
+    $assignments = (new AssignmentRepository())->getAllByCourses($subjects); //Array<[<Assignment, Student>]>
+    // var_dump($assignments);
+    // die();
   }
 } else {
   //useri nuk eshte logu 
@@ -65,36 +67,24 @@ if(isset($_SESSION['logged_user'])){
           <tr>
             <th scope="col">#</th>
             <th scope="col">Emri dhe mbiemri i studentit</th>
-            <th scope="col">Emri i lendes</th>
-            <th scope="col">Emri i detyres</th>
-            <th scope="col">Semestri</th>
+            <th scope="col">Emri i detyrës</th>
+            <th scope="col">Përshkrimi i detyrës</th>
+            <th scope="col">Deadline</th>
       
     
           </tr>
         </thead>
         <tbody>
+          <?php foreach($assignments as $key => $assignment): ?>
           <tr>
-            <th scope="row">1</th>
-            <td>Engjell Bunjaku</td>
-            <td>Interneti </td>
-            <td>####</td>
-            <td>3</td>
-           
+            <th scope="row"><?= $key+1 ?></th>
+            <td><?= $assignment['student']->getStudent_name() . " " . $assignment['student']->getStudent_surname()  ?></td>
+            <td><?= $assignment['assignment']->getAssignment_title() ?></td>
+            <td><?=$assignment['assignment']->getAssignment_description() ?> </td>
+            <td><?=$assignment['assignment']->getAssignment_deadline() ?></td>
+            </td>
           </tr>
-          <tr>
-              <th scope="row">2</th>
-              <td>Endrit Hoda</td>
-              <td>POO </td>
-              <td>####</td>
-              <td>3</td>
-          </tr>
-          <tr>
-              <th scope="row">2</th>
-              <td>Elon Demi </td>
-              <td>Arkitekture te kompjutereve</td>
-              <td>####</td>
-              <td>3</td>
-          </tr>
+          <?php endforeach; ?>
         </tbody>
       </table>
         </div>

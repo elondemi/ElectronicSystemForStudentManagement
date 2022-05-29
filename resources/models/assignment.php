@@ -17,14 +17,16 @@
         private $assignment_title;
         private $assignment_description;
         private $assignment_deadline;
+        private $assignment_student_id;
 
-         function __construct($assignment_id,$course_id,$assignment_title,$assignment_description,$assignment_deadline) {
+         function __construct($assignment_id,$course_id,$assignment_title,$assignment_description,$assignment_deadline, $assignment_student_id) {
             $this->assignment_id=$assignment_id;
             $this->course_id=$course_id;
             $this->assignment_title=$assignment_title;
             $this->assignment_description=$assignment_description;
             $this->assignment_deadline=$assignment_deadline;
-        }
+            $this->assignment_student_id = $assignment_student_id;
+        }   
 
         public function getAssignment_id()
         {
@@ -78,6 +80,18 @@
         public function setAssignment_deadline($assignment_deadline)
         {
                 $this->assignment_deadline = $assignment_deadline;
+        }
+
+       
+        public function getAssignment_student_id()
+        {
+                return $this->assignment_student_id;
+        }
+
+    
+        public function setAssignment_student_id($assignment_student_id)
+        {
+                $this->assignment_student_id = $assignment_student_id;
         }
     }
 

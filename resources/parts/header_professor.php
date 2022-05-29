@@ -29,6 +29,8 @@ function render_header($professor) {
           <li><a ' .  activeIf("/projekti_PI/pages/professor/dorezimet.php") . 'href="dorezimet.php" style="color: rgb(11, 126, 9);">Dorezimet</a></li>
           <li><a ' .  activeIf("/projekti_PI/pages/professor/vleresimet.php") . ' href="vleresimet.php" style="color: rgb(11, 126, 9);">Vleresimet</a></0li>
           <li><a ' .  activeIf("/projekti_PI/FAQ.php") . ' href="../../FAQ.php" style="color: rgb(11, 126, 9);">FAQ</a></li>
+          <li><a  href="/projekti_PI/logout.php" style="color: rgb(11, 126, 9);">Logout</a></li>
+
 
         
          

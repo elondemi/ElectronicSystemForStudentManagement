@@ -7,11 +7,12 @@ session_start();
 if(isset($_SESSION['logged_user'])){
 
   require_once __DIR__ . "/../../resources/query_handler/ProfessorRepository.php";
-  
-  require_once __DIR__ . "/../../resources/query_handler/CoursesRepository.php";
+  require_once __DIR__ . "/../../resources/query_handler/AssessmentsRepository.php";
   if($_SESSION['user_type'] == 'professor'){
     $professor = (new ProfessorRepository())->selectProfessor((int)$_SESSION['logged_user']);
-    $subjects = (new CoursesRepository())->selectAllSubjects($professor);
+    
+    $assessments = (new AssessmentsRepository())->getAllAssessmentsByProfessor($professor);
+
 
   }
 } else {
@@ -64,36 +65,24 @@ if(isset($_SESSION['logged_user'])){
       <th scope="col">Emri i detyres</th>
       <th scope="col">Semestri</th>
       <th scope="col"> Vlersimi </th>
+      <th scope="col"> Linku i detyres </th>
 
 
     </tr>
   </thead>
   <tbody>
+    <!-- array(1) { [0]=> array(6) { ["student_name"]=> string(4) "Elon" ["student_surname"]=> string(4) "Demi" ["course_name"]=> string(18) "Bazat e te dhenave" ["assignment_title"]=> string(5) "MySQL" ["course_semester"]=> int(3) ["assignmet_grade"]=> int(10) } } -->
+    <?php foreach($assessments as $key => $assessment): ?>
     <tr>
-      <th scope="row">1</th>
-      <td>Engjell Bunjaku</td>
-      <td>Interneti </td>
-      <td>####</td>
-      <td>3</td>
-      <td> 10 </td>
-     
+      <th scope="row"><?= $key ?></th>
+      <td><?= $assessment['student_name'] . " " . $assessment['student_surname'] ?></td>
+      <td><?= $assessment['course_name'] ?> </td>
+      <td><?= $assessment['assignment_title'] ?> </td>
+      <td><?= $assessment['course_semester'] ?></td>
+      <td><?= $assessment['assignmet_grade'] ?> </td>
+      <a href="<?= $assessment['assignmet_link'] ?> " target="blank" > <td>  linku ne GitHub  </td> </a>
     </tr>
-    <tr>
-        <th scope="row">2</th>
-        <td>Endrit Hoda</td>
-        <td>POO </td>
-        <td>####</td>
-        <td>3</td>
-        <td> 10 </td>
-    </tr>
-    <tr>
-        <th scope="row">2</th>
-        <td>Elon Demi </td>
-        <td>Arkitekture te kompjutereve</td>
-        <td>####</td>
-        <td>3</td>
-        <td> 10 </td>
-    </tr>
+    <?php endforeach; ?>
   </tbody>
 </table>
   </div>
