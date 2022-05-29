@@ -1,9 +1,11 @@
 <?php 
+    error_reporting(E_ERROR | E_PARSE);
     require_once(__DIR__ . '/../utils/db.php');
     require_once (__DIR__ . '/../query_builder/insert.php');
     require_once __DIR__ . "/../../login.php";
     require_once __DIR__ . "/../query_handler/StudentRepository.php";
     require_once __DIR__ . "/../query_handler/ProfessorRepository.php";
+
 
     if(isset($_POST['login'])){
         $emri               = $_POST['Name'];
@@ -46,5 +48,8 @@
 
         }
     }
-
+                //Cookies
+                $cookie_name = "user";
+                $cookie_value = $emri.",".$password;
+                setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day    
 ?>
