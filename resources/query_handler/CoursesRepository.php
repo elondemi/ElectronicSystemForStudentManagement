@@ -43,6 +43,22 @@ class CoursesRepository
         return new courses($course['course_id'],$course['course_name'],$course['course_description'],$course['course_ects'],$course['course_semester']);
     }
 
+    public function selectEnrolledBy(students $student): array {
+        $sql = "select courses.*
+        from courses inner join relation_student_course on courses.course_id = relation_student_course.course_id
+        where relation_student_course.student_id = ?;"; // SQL with parameters
+        $stmt = $this->connection->conn->prepare($sql); 
+        $student_id = $student->getStudent_id();
+        $stmt->bind_param("i", $student_id);
+        $stmt->execute();
+        $result = $stmt->get_result(); // get the mysqli result
+        $courses = array_map(function($course){
+            return new courses($course['course_id'],$course['course_name'],$course['course_description'],$course['course_ects'],$course['course_semester']);
+        }, mysqli_fetch_all($result, MYSQLI_ASSOC));
+        // die();
+        return $courses;   
+    }
+
     public function selectAllSubjects($teached_by_professor): array {
         $sql = "select *
         from courses inner join relation_professor_course rpc on courses.course_id = rpc.course_id

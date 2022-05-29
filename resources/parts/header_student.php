@@ -27,6 +27,7 @@ function render_header($students) {
       <a href="vleresimet.php">Vlerësimet</a>
       <a href="../../FAQ.php">FAQ</a>
       <a href="profili.php">Profili</a>
+      <a href="/projekti_PI/logout.php"> Log Out </a>
     </div>';
 }
 

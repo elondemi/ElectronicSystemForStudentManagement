@@ -55,11 +55,10 @@ class StudentRepository
 
     public function updateStudent(students $student) {
         $builder = UpdateQueryBuilder::create('students')
-            ->add('student_name', $student->getStudent_name())
+            ->add('student_password', $student->getStudent_password())
             ->addWhere('student_id', $student->getStudent_id(), 'i');
         $bindparamTypes =  implode(array_map(fn($el) => $builder->detectType($el), $builder->getValues()));
-        // var_dump($builder->getQuery(),  $bindparamTypes , $builder->getValues());
-
+        // var_dump($builder->getQuery(),  $bindparamTypes , $builder->getValues());    
         $stmt = $this->connection->execute($builder->getQuery(), $bindparamTypes, [...$builder->getValues()]);
         return;
     }
