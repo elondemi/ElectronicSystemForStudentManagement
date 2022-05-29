@@ -9,12 +9,15 @@ require "../../resources/parts/header_student.php";
         <link href="../../resources/assets/css/student.css" rel="stylesheet">
         <script src="../../resources/assets/js/student.js"></script>
     </head>  
+
+    <button onclick="myFunction()">Kthehu Mbrapa</button>
+
     <body>
       <?php render_header() ?>     
           <form action="xxxxx.php" method="POST" >
             <h1>
             <label for="lista">Lista e Detyrave nga Lënda </label>
-            <input type="text" id="lenda" name="lenda"></h1><br><br>
+            <label name="emri_lenda" >  ' . $lenda->getLenda_name() . ' </label>
           </form>
           <hr>
           <table id="customers">
