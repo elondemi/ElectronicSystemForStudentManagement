@@ -9,7 +9,17 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="resources/assets/css/login.css">
 </head>
-<body>
+<body onload="myFunction()">
+<script>
+function myFunction() {
+  let text = "Accept Cookies";
+  if (confirm(text) == true) {
+	
+  } else {
+	window.location="signup.php";
+  }
+}
+</script>
 	<div id="login-box">
 		<div class="left-box">
 			<h1>Log In </h1>
