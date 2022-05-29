@@ -12,8 +12,8 @@ Class Database
     {
         $this->host = "localhost";
         $this->user = "root";
-        $this->pass = "Endrit1.2";
-        $this->db = "sems";
+        $this->pass = "root123";
+        $this->db = "projekti_php";
     }
 
     public function connect()

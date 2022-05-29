@@ -19,7 +19,7 @@
 					<input type="password" name="Password" placeholder="Password"/>
 					<label>Roli: </label> 
 					<label>Student</label>
-					<input type="radio" name="Role" value="student" />
+					<input type="radio" name="Role" value="student" checked />
 					<label>Prof</label>
 					<input type="radio" name="Role" value="prof/ass" />
 					<input  type="submit" name="login" value="Log In">	
