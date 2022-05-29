@@ -1,6 +1,24 @@
-<?php
-require "../../resources/parts/header_student.php";
-?>
+<?php 
+ require "../../resources/parts/header_student.php";
+
+
+ 
+session_start();
+if(isset($_SESSION['logged_user'])){
+  require_once __DIR__ . "/../../resources/query_handler/StudentRepository.php";
+  if($_SESSION['user_type'] == 'student'){
+    $students = (new StudentRepository())->selectStudent((int)$_SESSION['logged_user']);
+   
+    // var_dump($assignments);
+    // die();
+  }
+} else {
+  //useri nuk eshte logu 
+}
+
+
+
+ ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,7 +28,7 @@ require "../../resources/parts/header_student.php";
     <script src="../../resources/assets/js/student.js"></script>
   </head>  
   <body>     
-    <?php render_header() ?>
+    <?php render_header($students) ?>
      <h1 style="margin-left:300px;margin-bottom: 40px;">Dorëzo Detyrën</h1><hr>
         <form action="xxxx.php" method="POST">
            <table id="customers">
@@ -18,8 +36,7 @@ require "../../resources/parts/header_student.php";
                <th><label for="lenda">Zgjedh Lenda</label></th>
                <th><label for="semestri">Zgjedh  Semestrin</label></th>
                <th><label for="detyra">Zgjedh  Detyren</label></th>
-               <th><label for="detyra">Ngarko Detyren</label></th>
-               <th><label for="dorezo">Dorezo</label></th>
+               <th><label for="detyra">Shkruaj linkun ne GitHub</label></th>
              </tr>  
              <tr>
                 <td>
@@ -47,10 +64,11 @@ require "../../resources/parts/header_student.php";
                     </select>
                  </td>
                  <td>
-                    <input type="file" id="myFile" name="filename">
-                 </td>
-                 <td>
-                    <input type="submit" id="dorezo" name="dorezo" value="Dorezo">
+                    <form action=""  method="post">
+                       <textarea  placeholder="Shkruaj linkun..."></textarea>
+                       <input style="position:relative;left:150px; top:-10px;" type="submit"> </input>
+                       
+                    </form>   
                  </td>
              </tr>
         </form>

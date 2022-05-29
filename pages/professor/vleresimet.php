@@ -80,7 +80,7 @@ if(isset($_SESSION['logged_user'])){
       <td><?= $assessment['assignment_title'] ?> </td>
       <td><?= $assessment['course_semester'] ?></td>
       <td><?= $assessment['assignmet_grade'] ?> </td>
-      <a href="<?= $assessment['assignmet_link'] ?> " target="blank" > <td>  linku ne GitHub  </td> </a>
+      <td> <a href="<?= $assessment['assignmet_link'] ?>" target="blank" > <button> Linku ne GitHub </button>  </a> </td>
     </tr>
     <?php endforeach; ?>
   </tbody>

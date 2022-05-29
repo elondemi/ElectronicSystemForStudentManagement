@@ -1,7 +1,7 @@
 <?php
 
 
-function render_header() {
+function render_header($students) {
     echo ' <div class="top">
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
     <!-- e ueb sajtit duhet të përmbaj patjetër këto meny: Home,
@@ -13,7 +13,7 @@ function render_header() {
       <img src="../../resources/assets/images/prof_img1.jpg" alt="Avatar" style="width: 100px">
       <br><br>
       <form>
-        <span style="margin-left:25px"> <label name="emri_studenti" >  ' . $studenti->getStudent_name() . " " . $studenti->getStudent_surname() . ' </label><br></span>
+      <label style="margin-left:25px" name="emri_studenti">  ' . $students->getStudent_name() . " " . $students->getStudent_surname() . ' </label>
       </form>
       <p>Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike</p>
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>

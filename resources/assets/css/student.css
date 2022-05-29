@@ -87,29 +87,14 @@ float:right
   }
   .profili{
     position: relative;
-    left: -20px;
       background-color: rgba(16, 52, 77, 0.644);
       width:501px;
       height:589px;
-      margin-left:100px;
-      margin-bottom: 100px;
       border-style:solid;
       border-color: rgb(1, 15, 53);
       color:white;
   }
-  .profili2{
-    position: relative;
-    top: -695px;
-    left: 40%;
-      color:white;
-      background-color: rgba(16, 52, 77, 0.644);
-      margin-right:8px;
-       width: 890px;
-       height:589px;
-       margin-bottom: 100px;
-       border-style:solid;
-      border-color: rgb(1, 15, 53);
-  }
+
   .foto{
        margin-left:179px;
        border-radius: 15%;

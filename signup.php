@@ -14,7 +14,7 @@
 
 			<form action="signup.php"  method="post">
 			<h1>Regjistrohu</h1>
-				<label style="text-color:red;" name="error"> <?php $error ?> </label>
+				<label style="color:red;" name="error"> <?php $error ?> </label>
 				<input type="text" name="Name" placeholder="Emri"/>
 				<input type="text" name="Surname" placeholder="Mbiemri"/>
 				<label>Roli: </label> 
