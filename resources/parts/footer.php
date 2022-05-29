@@ -19,7 +19,7 @@ function render_footer(){
          <div class="contact-address">
            <i class="bi bi-geo-alt"></i>
            <h3>Address</h3>
-           <address>A108 Adam Street, NY 535022, USA</address>
+           <address>(Kamenice, Prishtine)- Kosove</address>
          </div>
        </div>
 
@@ -27,7 +27,7 @@ function render_footer(){
          <div class="contact-phone">
            <i class="bi bi-phone"></i>
            <h3>Phone Number</h3>
-           <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+           <p><a href="tel:+155895548855">+383 49 453 286</a></p>
          </div>
        </div>
 
@@ -35,7 +35,7 @@ function render_footer(){
          <div class="contact-email">
            <i class="bi bi-envelope"></i>
            <h3>Email</h3>
-           <p><a href="mailto:info@example.com">info@example.com</a></p>
+           <p><a href="mailto:elondemi7@gmail.com">group4@gmail.com</a></p>
          </div>
        </div>
 
@@ -56,7 +56,7 @@ function render_footer(){
 
  <div class="container">
    <div class="copyright">
-     &copy; Copyright <strong><span>Groovin</span></strong>. All Rights Reserved
+     &copy; Copyright <strong><span>Group 4</span></strong>. All Rights Reserved
    </div>
    <div class="credits">
     

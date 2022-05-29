@@ -1,8 +1,24 @@
-<?php
+<?php 
+ require "../../resources/parts/header_student.php";
 
-require "../../resources/parts/header_student.php";
-?>
 
+ 
+session_start();
+if(isset($_SESSION['logged_user'])){
+  require_once __DIR__ . "/../../resources/query_handler/StudentRepository.php";
+  if($_SESSION['user_type'] == 'student'){
+    $students = (new StudentRepository())->selectStudent((int)$_SESSION['logged_user']);
+   
+    // var_dump($assignments);
+    // die();
+  }
+} else {
+  //useri nuk eshte logu 
+}
+
+
+
+ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,7 +28,7 @@ require "../../resources/parts/header_student.php";
         <script src="../../resources/assets/js/student.js"></script>
     </head>  
     <body>
-      <?php render_header() ?>    
+      <?php render_header($students) ?>    
            
 <div class="GrafikuN">
     <h1>...Grafika e Notav</h1>

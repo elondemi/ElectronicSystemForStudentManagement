@@ -42,7 +42,7 @@ class AssessmentsRepository
     public function getAllAssessmentsByProfessor(professors $professor){
 
 
-        $sql = 'select s.student_name, s.student_surname, c.course_name, a.assignment_title, c.course_semester, relation_assignment_professor_student.assignmet_grade
+        $sql = 'select s.student_name, s.student_surname, c.course_name, a.assignment_title, c.course_semester, relation_assignment_professor_student.assignmet_grade, relation_assignment_professor_student.assignmet_link
         from relation_assignment_professor_student
         inner join assignment a on relation_assignment_professor_student.assignment_id = a.assignment_id
         inner join students s on a.student_id = s.student_id

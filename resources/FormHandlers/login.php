@@ -41,7 +41,7 @@
             $_SESSION['logged_user'] = $id;
             $_SESSION['user_type'] = ($_POST['Role'] == 'student') ? 'student' : 'professor';
             if(($_POST['Role'] == 'student')){
-              
+                header("Location: /projekti_PI/pages/student/lendet.php");
             } else {
                 header("Location: /projekti_PI/pages/professor/lendet.php");
             }
