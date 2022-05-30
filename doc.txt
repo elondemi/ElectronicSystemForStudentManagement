@@ -1,0 +1,31 @@
+Dokumentimi i kodit ne PHP
+
+
+
+Qellimi i projektit tone eshte qe te krijojme nje website i cili sherben per te menaxhuar  nje sherbim te studenteve.
+Teknologjite e perdorura jane PHP(per pjesen e back-end) HTML CSS JS(per pjesen e front-end), AJAX, Facebook API dhe MySQL( phpMyAdmin)(per menaxhimin e databazes).
+Fokusi yne kryesor ka qene ne pjesen e back-end duke u munduar qe te krijojme logjiken e back-end teresishte te orientuar ne objekte(OOP),
+Kemi krijuar disa klasa kyresore te cilat bejne lidhjen me database ku connection kthehet permes metodave publike te klases.
+Pjesa e queries eshte bere me ane te Query Builderve te cilet na ndihmojne per te iu shmangur SQL Injection. Fillimisht rol kryesor ka Abstact Query Builder sepse ne te eshte krijuar struktura bazike dhe e cila trashegohet ne klasa me specifike (Insert, Update).
+Per pjesen e databazes jemi munduar qe ta thjeshtojme ne tabela me sa me pak kolona. Kemi krijuar tabela lidhese te cilat sherbejne per lidhjen mes tyre.
+Secila tabele ka celes primar dhe cdo tabele eshte e lidhur me njera tjetren permes foreign keys duke mundesuar qe ne cdo kohe te krijojme inner joins per te i perdorur te dhenat e plota.
+Fillimisht ideja e projektit qendron e ndare ne 2 pjese te gjera pjesa per studentin dhe profesorin.
+Ne momentin e login apo signup permes radio-buttonit caktojme se me cfare privilegji eshte duke hyre useri dhe varesishte se cilen nga mundesite zgjedhe krijohen validimet.
+Te pjesa e loginit validimi kryhet permes metodes se  query builder find() i cili krahason te dhenat qe i ka shkruar useri me te dhenat qe gjenden ne database.
+Pjesa e signup fillimisht validohet permes regex e pastaj te dhenat dergohen ne database.
+Ne pjesen e signup gjendet edhe perdorimi i AJAX i cili ne rastin tone tregon se a eshte password jone ne radhet e passwordeve te dobet.
+Pasi qe te regjistrohet useri kalon ne pjesen e loginit.
+
+
+Kur te logohet atehere fillon sessioni i cili qendron hapur deri sa te behet sign out.
+Ne momentin qe nje user logohet, panvarsishte se me cfare roli, faqet jane te personalizuara per te per shkak se kemi krijuar disa klasa- modele te cilat jane te pajisura me getters and setters per te ofruar qasje te gjithe anshme.
+Te gjitha faqet te cilat dalin pas loginit jane te krijuara ne menyre dinamike dhe funksionale pra te gjitha jane te lidhura me ane te databazes dhe marrin te dhene ne kohe reale.
+Buttonat tek profesori si psh SHTO Lende jane teresishte funksional dhe japin interaktivitet faqes me database.
+Neper te gjithe text fields jemi kujdesur per shmangie per SQL Injection.
+Ne kete projekte kemi perdorur kushtezimet kryesishte if/else dhe lloje te ndryshme te arrays.
+Rendesi te vecante i kemi kushtuar cookies te  cilat jane teresishte funksionale dhe ruhen ne memorien cache te browserit dhe te cilat ruajne vlere.
+Sesionet poashtu jane nje pjese kyqe e projektit tone per shkak se vazhdimisht na duhet qe te validojme dhe te i japim qasje te ndryshme per user ate ndryshem.
+Edhe pse nuk kane qene te nevojshme ne kete project kemi perdorur edhe menaxhimin edhe files duke lexuar files nga pajisja jone locale.
+Error handling poashtu eshte pjese e rendesishme ku I kemi perdorur zakonisht tek pjeset te cilat eventualisht mund qe ne raste specifike te mos egzekutohen.
+Perdorimi i php email nuk ka qene i mundur per te u realizuar per shkak se duhet qe te kemi perdorim nje SMTP server prandaj kete pjese e kemi mbuluar m eane te try catch finally blocks.
+
