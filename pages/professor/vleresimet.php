@@ -8,9 +8,9 @@ if(isset($_SESSION['logged_user'])){
 
   require_once __DIR__ . "/../../resources/query_handler/ProfessorRepository.php";
   require_once __DIR__ . "/../../resources/query_handler/AssessmentsRepository.php";
+  
   if($_SESSION['user_type'] == 'professor'){
     $professor = (new ProfessorRepository())->selectProfessor((int)$_SESSION['logged_user']);
-    
     $assessments = (new AssessmentsRepository())->getAllAssessmentsByProfessor($professor);
 
 

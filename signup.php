@@ -31,12 +31,7 @@ function showHint(str) {
 
 			<form action="signup.php"  method="post">
 			<h1>Regjistrohu</h1>
-<<<<<<< HEAD
-			
-				<label style="text-color:red" name="error"> <?php echo $error="Shit" ?> </label>
-=======
 				<span style="color:red;" name="error"> <?php echo $error ?> </label>
->>>>>>> a83c719ceceeade015d087274bccf80472d5c937
 				<input type="text" name="Name" placeholder="Emri"/>
 				<input type="text" name="Surname" placeholder="Mbiemri"/>
 				<label style="color:black;">Roli: </label> 

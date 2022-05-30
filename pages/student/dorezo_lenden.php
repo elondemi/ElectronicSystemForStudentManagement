@@ -6,9 +6,13 @@
 session_start();
 if(isset($_SESSION['logged_user'])){
   require_once __DIR__ . "/../../resources/query_handler/StudentRepository.php";
-  if($_SESSION['user_type'] == 'student'){
-    $students = (new StudentRepository())->selectStudent((int)$_SESSION['logged_user']);
-   
+  require_once __DIR__ . "/../../resources/query_handler/StudentRepository.php";
+  require_once __DIR__ . "/../../resources/query_handler/StudentCourseRepository.php";
+
+
+
+    if ($_SESSION['user_type'] == 'student') {
+        $students = (new StudentRepository())->selectStudent((int)$_SESSION['logged_user']);
     // var_dump($assignments);
     // die();
   }
@@ -26,11 +30,19 @@ if(isset($_SESSION['logged_user'])){
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <link href="../../resources/assets/css/student.css" rel="stylesheet">
     <script src="../../resources/assets/js/student.js"></script>
+
+    <link href="../../resources/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+      <link href="../../resources/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="../../resources/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+      <link href="../../resources/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+      <link href="../../resources/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+      <link href="../../resources/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    
   </head>  
   <body>     
     <?php render_header($students) ?>
      <h1 style="margin-left:300px;margin-bottom: 40px;">Dorëzo Detyrën</h1><hr>
-        <form action="xxxx.php" method="POST">
+        <form action="dorezo_lenden.php?student_id=<?= $students->getStudent_id() ?>" method="POST">
            <table id="customers">
              <tr>
                <th><label for="lenda">Zgjedh Lenda</label></th>
@@ -40,33 +52,17 @@ if(isset($_SESSION['logged_user'])){
              </tr>  
              <tr>
                 <td>
-                   <select name="lenda" id="lenda">
-                   <option value="Programimi" name="Programimi">Programimi</option>
-                   <option value="Baza e te dhenave" name ="Baza_te_dhenave">Baza e te dhenave</option>
-                   <option value="Sistemet Operative" name="Sisteme_Operative">Sistemet Operative</option>
-                   <option value="Algoritme" name="Algoritme">Algorimte</option>
-                   </select>
+                     <input type="text"  placeholder="Zgjedh lenden" name="lenda"> </input>
                 </td>
                 <td>
-                    <select name="semestri" id="semestri">
-                    <option value="sems 3" name="semestri_3">Semestri-3</option>
-                    <option value="sems 4"  name="semestri_4">Semestri-4</option>
-                    <option value="sems 5"  name="semestri_5">Semestri-5</option>
-                    <option value="sems 6"  name="semestri_6">Semestri-6</option>
-                    </select>
+                     <input type="text" placeholder="Zgjedh semestrin" name="semestri"> </input>
                 </td>
                 <td>
-                    <select name="detyra" id="detyra">
-                    <option value="detyra1" name="detyra_1">Detyra 1</option>
-                    <option value="detyra2"  name="detyra_2">Detyra 2</option>
-                    <option value="detyra3"  name="detyra_3">Detyra 3</option>
-                    <option value="detyra4"  name="detyra_4">Detyra 4</option>
-                    </select>
+                      <input type="text" placeholder="Zgjedh detyren" name="detyra"> </input>
                  </td>
                  <td>
-                    <form action=""  method="post">
-                       <textarea  placeholder="Shkruaj linkun..."></textarea>
-                       <input style="position:relative;left:150px; top:-10px;" type="submit"> </input>
+                 <input type="text" placeholder="Shkruaj linkun" name="linku"> </input>
+                       <input style="position:relative;left:150px; " type="submit" name="dorezo_detyren"> </input>
                        
                     </form>   
                  </td>

@@ -18,12 +18,12 @@ Class Database
 
     public function connect()
     {
-
+        try{
         $this->conn = new mysqli($this->host, $this->user, $this->pass, $this->db);
-       if(!$this->conn) {
-           echo "Connection Failed!";
-       }
        return $this;
+    } catch (Exception $e){
+        echo 'Connection failed ';
+    }
 
     }
 

@@ -40,8 +40,6 @@ class AssessmentsRepository
  
 
     public function getAllAssessmentsByProfessor(professors $professor){
-
-
         $sql = 'select s.student_name, s.student_surname, c.course_name, a.assignment_title, c.course_semester, relation_assignment_professor_student.assignmet_grade, relation_assignment_professor_student.assignmet_link
         from relation_assignment_professor_student
         inner join assignment a on relation_assignment_professor_student.assignment_id = a.assignment_id
@@ -51,6 +49,26 @@ class AssessmentsRepository
         $professor_id = $professor->getProfessor_id();
         $stmt = $this->connection->conn->prepare($sql);
         $stmt->bind_param("i", $professor_id);
+        $stmt->execute();
+        $result = $stmt->get_result(); // get the mysqli result
+        return mysqli_fetch_all($result, MYSQLI_ASSOC);
+        
+    }
+
+    
+    public function getAllAssessmentsByStudent(students $student){
+        $sql = 'select  a.assignment_title, c.course_name, c.course_semester, p.professor_name,
+        relation_assignment_professor_student.assignmet_grade
+        from relation_assignment_professor_student
+        inner join assignment a on relation_assignment_professor_student.assignment_id = a.assignment_id
+        inner join courses c on a.course_id = c.course_id
+        inner join professors p on relation_assignment_professor_student.professor_id = p.professor_id
+        inner join students s on relation_assignment_professor_student.student_id= s.student_id
+where a.student_id = ?';
+        
+        $student_id = $student->getStudent_id();
+        $stmt = $this->connection->conn->prepare($sql);
+        $stmt->bind_param("i", $student_id);
         $stmt->execute();
         $result = $stmt->get_result(); // get the mysqli result
         return mysqli_fetch_all($result, MYSQLI_ASSOC);
