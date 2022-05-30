@@ -7,11 +7,11 @@
 //     student_email varchar(45),
 //     PRIMARY KEY(student_id)
 // );
-include_once __DIR__ . "/../query_builder/insert.php"; 
-include_once __DIR__ . "/../query_builder/abstract.php"; 
-include_once __DIR__ . "/../query_builder/update.php"; 
-include_once __DIR__ . "/../utils/db.php";
-include_once __DIR__ . "/../models/students.php";
+require_once __DIR__ . "/../query_builder/insert.php"; 
+require_once __DIR__ . "/../query_builder/abstract.php"; 
+require_once __DIR__ . "/../query_builder/update.php"; 
+require_once __DIR__ . "/../utils/db.php";
+require_once __DIR__ . "/../models/students.php";
 
 
 class StudentRepository

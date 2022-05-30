@@ -26,6 +26,14 @@ if(isset($_SESSION['logged_user'])){
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
         <link href="../../resources/assets/css/student.css" rel="stylesheet">
         <script src="../../resources/assets/js/student.js"></script>
+
+        <link href="../../resources/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+      <link href="../../resources/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="../../resources/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+      <link href="../../resources/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+      <link href="../../resources/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+      <link href="../../resources/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    
     </head>  
     <body>
       <?php render_header($students) ?>    

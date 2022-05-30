@@ -84,14 +84,14 @@ $bgColor = $_COOKIE['bgColor'];
     $test1="We will answer soon!";
  
     // connect with database
-    $conn = new PDO("mysql:host=localhost;dbname=sems", "root", "Endrit1.2");
+    $conn = new PDO("mysql:host=localhost;dbname=sems", "root", "");
  
     // check if insert form is submitted
     if (isset($_POST["submit"]))
     {
        
         // insert in faqs table
-        $sql = "INSERT INTO test (question, answer) VALUES (?, ?)";
+        $sql = "INSERT INTO FAQ (question, answer) VALUES (?, ?)";
         $statement = $conn->prepare($sql);
         $statement->execute([
             $_POST["question"],
@@ -99,7 +99,7 @@ $bgColor = $_COOKIE['bgColor'];
         ]);
     }
 
-    $sql = "SELECT * FROM test";
+    $sql = "SELECT * FROM FAQ";
     $statement = $conn->prepare($sql);
     $statement->execute();
     $faqs = $statement->fetchAll();
