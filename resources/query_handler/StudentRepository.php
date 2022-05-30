@@ -63,6 +63,19 @@ class StudentRepository
         return;
     }
 
+    public function selectname() {
+        $sql = "SELECT student_name FROM students"; // SQL with parameters
+        $stmt = $this->connection->conn->prepare($sql); 
+        $stmt->execute();
+        $result = $stmt->get_result(); // get the mysqli result
+        $user = $result->fetch_assoc();
+        // $professor_name,$professor_surname,$professor_role,$professor_email,$professor_password
+        
+        return $user;
+         // new students($user['student_id'], $user['student_name'], $user['student_surname'], $user['student_password'], $user['student_email']);
+    }
+
+
     
 }
 
