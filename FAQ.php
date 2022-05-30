@@ -33,15 +33,52 @@ require "resources/parts/footer.php";
 
   <!-- Template Main CSS File -->
   <link href="resources/assets/css/style.css" rel="stylesheet">
-
+  <style> 
+  .css {
+  background-color: #04AA6D;
+  color: white;
+  border-radius: 50px 50px;
+  text-decoration: none;
+  margin: 4px 2px;
+} 
+</style>
 
 
 </head>
+<?php 
+   if (isset($_POST['submitted'])){
+    #nese po, vendosi vlerat nga POST array ne variabla
+    $newbgColor=$_POST['bgColor'];
+    #set cookies
+    setcookie("bgColor",$newbgColor,time()+3600);
+}
+//ne rast se shfrytezuesi vjen per here te pare dhe cookies nuk jane vendosur,
+//atehere
+if (!isset($_COOKIE['bgColor'])) {
+$bgColor = "#f0ca59";
+}
+#nese cookie-t jane vendousr, atehere perdori ato cookie
+else{
+$bgColor = $_COOKIE['bgColor'];
+}
+?>
 
-<body>
+<body style="background-color:<?php echo $bgColor ?>">
     <?php render_header() ?>
- 
-
+    <div style=" position: relative;
+  left: 20px">
+    <form action= "<?php echo $_SERVER['PHP_SELF']; ?>" method ="POST">
+<span> </span></br></br>
+<span class="css" >Choose background mode</span>
+<select name=bgColor class="css">
+<option value ="#c0cfc7" selected>Bright</option>
+<option value ="#4d5054" >Dark</option>
+<option value ="#f0ca59">Mild</option>
+</select>
+<input type ="hidden" name="submitted" value="true">
+<input type="submit" value="Kujto vlerat" class="css">
+</form> 
+</div>
   <link rel="stylesheet" href="//cdn.materialdesignicons.com/3.7.95/css/materialdesignicons.min.css">
 <?php
     $test1="We will answer soon!";
@@ -87,8 +124,8 @@ require "resources/parts/footer.php";
                 <?php endforeach; ?>
 <div style="position:relative;left:35%;">
   <form method="POST" >
-        <textarea id="subject" name="question" placeholder="Sheno pyetjen tende..." style="height:200px;width:400px;"></textarea>
-      <input type="submit" name="submit" value="Dergo Pyetjen" class="social facebook"></input> 
+        <textarea  id="subject" name="question" placeholder="Sheno pyetjen tende..." style="height:200px;width:400px;"></textarea>
+      <input type="submit" name="submit" value="Dergo Pyetjen" class="css"></input> 
   </form>	
 </div>
 <?php render_footer() ?>

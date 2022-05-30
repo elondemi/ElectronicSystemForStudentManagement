@@ -12,11 +12,7 @@ Class Database
     {
         $this->host = "localhost";
         $this->user = "root";
-<<<<<<< HEAD
         $this->pass = "Endrit1.2";
-=======
-        $this->pass = "";
->>>>>>> 171c1a0e4bceb324e4def707ca40ae316e0f433b
         $this->db = "sems";
     }
 
